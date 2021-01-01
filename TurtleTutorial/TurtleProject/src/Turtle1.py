@@ -3,17 +3,21 @@ from swampy.TurtleWorld import *
 
 welt = TurtleWorld()
 tim = Turtle()
+tim.delay = 0.1
 print(tim)
 
 def fakultaet(n):
+    """ berechnet die Fakultät von einer Zahl"""
     space = ' ' * n
-    print(space, 'Fakultät: ', n)
+    fill = '-' * n
+    fill = '*' * n
     if n < 0:
         print("Fakultät kann nur von positiven ganzen Zahlen berechnet werden")
         return None
     elif n == 0:
         return 1
     else:
+        print(space, 'Fakultät: ',fill[0:n-1], n)
         return n*fakultaet(n-1)
 
 def quadrat(turtle, breite):
